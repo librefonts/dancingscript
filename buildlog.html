@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Build Log</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+<style type="text/css">
+  .popover {
+    max-width: 1980px;
+    font-family: Courier,serif;
+}
+
+.footer {
+  color: #bbb;
+  text-align: center;
+  font-size: smaller;
+  padding: 0 0;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer:hover {
+  color: #444;
+}
+
+.footer a {
+  color: #add8e6;
+}
+
+.footer:hover a {
+  color: #0088cc;
+}
+
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 10px 0;
+}
+.footer-links li {
+  list-style: none;
+  line-height: 1.2em;
+}
+.footer-links li:first-child {
+  padding-left: 0;
+}
+</style>
+  <style>
+    pre {
+      white-space: pre-wrap;
+      white-space: -moz-pre-wrap;
+      white-space: -o-pre-wrap;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+<div class="container-fluid">
+  
+  
+
+
+<ul class="nav nav-tabs">
+    <li><a href="https://github.com/fontdirectory/dancingscript/tree/gh-pages" target="_blank"><i class="fa fa-github"></i> gh-pages</a></li>
+    <li><a href="https://github.com/fontdirectory/dancingscript" target="_blank"><i class="fa fa-github-square"></i> Github Page</a></li>
+    <li><a href="index.html">Summary</a></li>
+    <li>
+        
+        <a href="review.html">Review</a>
+        
+    </li>
+    <li><a href="checks.html">Pre-Build Checks</a></li>
+    <li><a href="tests.html">Tests</a></li>
+    <li class="active"><a href="buildlog.html">Build Log</a></li>
+    <li><a href="metadata.html">METADATA.json</a></li>
+    <li><a href="bakery-yaml.html">bakery.yaml</a></li>
+    <li><a href="description.html">Description</a></li>
+  </ul>
+
+  <pre><h1>Bake Begins!</h1>
+<h3>(1 of 6) Copy sources</h3>
+<p>$ cp -a /home/travis/build/fontdirectory/dancingscript/METADATA.json /home/travis/build/fontdirectory/dancingscript/builds/build
+$ cp -a /home/travis/build/fontdirectory/dancingscript/DESCRIPTION.en_us.html /home/travis/build/fontdirectory/dancingscript/builds/build
+$ cp -a /home/travis/build/fontdirectory/dancingscript/FONTLOG.txt /home/travis/build/fontdirectory/dancingscript/builds/build
+$ cp -a DancingScript-Regular.ttf.ttx DancingScript-Bold.ttf.ttx src/DancingScript-Regular.otf.ttx src/DancingScript-Regular-VTT.ttf.ttx src/DancingScript-Bold.otf.ttx src/DancingScript-Bold-VTT.ttf.ttx DancingScript-Regular.ttf.<em>p_r_e_p.ttx DancingScript-Regular.ttf._p_o_s_t.ttx DancingScript-Regular.ttf._n_a_m_e.ttx DancingScript-Regular.ttf._m_a_x_p.ttx DancingScript-Regular.ttf._l_o_c_a.ttx DancingScript-Regular.ttf._k_e_r_n.ttx DancingScript-Regular.ttf._h_m_t_x.ttx DancingScript-Regular.ttf._h_h_e_a.ttx DancingScript-Regular.ttf._h_e_a_d.ttx DancingScript-Regular.ttf._h_d_m_x.ttx DancingScript-Regular.ttf._g_l_y_f.ttx DancingScript-Regular.ttf._g_a_s_p.ttx DancingScript-Regular.ttf._f_p_g_m.ttx DancingScript-Regular.ttf._c_v_t.ttx DancingScript-Regular.ttf._c_m_a_p.ttx DancingScript-Regular.ttf.V_D_M_X</em>.ttx DancingScript-Regular.ttf.O_S_2f_2.ttx DancingScript-Regular.ttf.L_T_S_H_.ttx DancingScript-Regular.ttf.GlyphOrder.ttx DancingScript-Regular.ttf.G_S_U_B_.ttx DancingScript-Regular.ttf.G_P_O_S_.ttx DancingScript-Regular.ttf.G_D_E_F_.ttx DancingScript-Bold.ttf.<em>p_r_e_p.ttx DancingScript-Bold.ttf._p_o_s_t.ttx DancingScript-Bold.ttf._n_a_m_e.ttx DancingScript-Bold.ttf._m_a_x_p.ttx DancingScript-Bold.ttf._l_o_c_a.ttx DancingScript-Bold.ttf._k_e_r_n.ttx DancingScript-Bold.ttf._h_m_t_x.ttx DancingScript-Bold.ttf._h_h_e_a.ttx DancingScript-Bold.ttf._h_e_a_d.ttx DancingScript-Bold.ttf._h_d_m_x.ttx DancingScript-Bold.ttf._g_l_y_f.ttx DancingScript-Bold.ttf._g_a_s_p.ttx DancingScript-Bold.ttf._f_p_g_m.ttx DancingScript-Bold.ttf._c_v_t.ttx DancingScript-Bold.ttf._c_m_a_p.ttx DancingScript-Bold.ttf.V_D_M_X</em>.ttx DancingScript-Bold.ttf.O_S_2f_2.ttx DancingScript-Bold.ttf.L_T_S_H_.ttx DancingScript-Bold.ttf.GlyphOrder.ttx DancingScript-Bold.ttf.G_S_U_B_.ttx DancingScript-Bold.ttf.G_P_O_S_.ttx DancingScript-Bold.ttf.G_D_E_F_.ttx src/DancingScript-Regular.otf.<em>p_o_s_t.ttx src/DancingScript-Regular.otf._n_a_m_e.ttx src/DancingScript-Regular.otf._m_a_x_p.ttx src/DancingScript-Regular.otf._k_e_r_n.ttx src/DancingScript-Regular.otf._h_m_t_x.ttx src/DancingScript-Regular.otf._h_h_e_a.ttx src/DancingScript-Regular.otf._h_e_a_d.ttx src/DancingScript-Regular.otf._c_m_a_p.ttx src/DancingScript-Regular.otf.O_S_2f_2.ttx src/DancingScript-Regular.otf.GlyphOrder.ttx src/DancingScript-Regular.otf.G_S_U_B</em>.ttx src/DancingScript-Regular.otf.G_P_O_S_.ttx src/DancingScript-Regular.otf.C_F_F_.ttx src/DancingScript-Regular-VTT.ttf.<em>p_r_e_p.ttx src/DancingScript-Regular-VTT.ttf._p_o_s_t.ttx src/DancingScript-Regular-VTT.ttf._n_a_m_e.ttx src/DancingScript-Regular-VTT.ttf._m_a_x_p.ttx src/DancingScript-Regular-VTT.ttf._l_o_c_a.ttx src/DancingScript-Regular-VTT.ttf._k_e_r_n.ttx src/DancingScript-Regular-VTT.ttf._h_m_t_x.ttx src/DancingScript-Regular-VTT.ttf._h_h_e_a.ttx src/DancingScript-Regular-VTT.ttf._h_e_a_d.ttx src/DancingScript-Regular-VTT.ttf._g_l_y_f.ttx src/DancingScript-Regular-VTT.ttf._g_a_s_p.ttx src/DancingScript-Regular-VTT.ttf._f_p_g_m.ttx src/DancingScript-Regular-VTT.ttf._c_v_t.ttx src/DancingScript-Regular-VTT.ttf._c_m_a_p.ttx src/DancingScript-Regular-VTT.ttf.T_S_I<strong>5.ttx src/DancingScript-Regular-VTT.ttf.T_S_I</strong>3.ttx src/DancingScript-Regular-VTT.ttf.T_S_I<strong>2.ttx src/DancingScript-Regular-VTT.ttf.T_S_I</strong>1.ttx src/DancingScript-Regular-VTT.ttf.T_S_I<strong>0.ttx src/DancingScript-Regular-VTT.ttf.O_S_2f_2.ttx src/DancingScript-Regular-VTT.ttf.GlyphOrder.ttx src/DancingScript-Regular-VTT.ttf.G_S_U_B_.ttx src/DancingScript-Regular-VTT.ttf.G_P_O_S_.ttx src/DancingScript-Regular-VTT.ttf.G_D_E_F_.ttx src/DancingScript-Bold.otf.<em>p_o_s_t.ttx src/DancingScript-Bold.otf._n_a_m_e.ttx src/DancingScript-Bold.otf._m_a_x_p.ttx src/DancingScript-Bold.otf._k_e_r_n.ttx src/DancingScript-Bold.otf._h_m_t_x.ttx src/DancingScript-Bold.otf._h_h_e_a.ttx src/DancingScript-Bold.otf._h_e_a_d.ttx src/DancingScript-Bold.otf._c_m_a_p.ttx src/DancingScript-Bold.otf.O_S_2f_2.ttx src/DancingScript-Bold.otf.GlyphOrder.ttx src/DancingScript-Bold.otf.G_S_U_B</em>.ttx src/DancingScript-Bold.otf.G_P_O_S_.ttx src/DancingScript-Bold.otf.C_F_F_.ttx src/DancingScript-Bold-VTT.ttf._p_r_e_p.ttx src/DancingScript-Bold-VTT.ttf._p_o_s_t.ttx src/DancingScript-Bold-VTT.ttf._n_a_m_e.ttx src/DancingScript-Bold-VTT.ttf._m_a_x_p.ttx src/DancingScript-Bold-VTT.ttf._l_o_c_a.ttx src/DancingScript-Bold-VTT.ttf._k_e_r_n.ttx src/DancingScript-Bold-VTT.ttf._h_m_t_x.ttx src/DancingScript-Bold-VTT.ttf._h_h_e_a.ttx src/DancingScript-Bold-VTT.ttf._h_e_a_d.ttx src/DancingScript-Bold-VTT.ttf._g_l_y_f.ttx src/DancingScript-Bold-VTT.ttf._g_a_s_p.ttx src/DancingScript-Bold-VTT.ttf._f_p_g_m.ttx src/DancingScript-Bold-VTT.ttf._c_v_t.ttx src/DancingScript-Bold-VTT.ttf._c_m_a_p.ttx src/DancingScript-Bold-VTT.ttf.T_S_I</strong>5.ttx src/DancingScript-Bold-VTT.ttf.T_S_I<strong>3.ttx src/DancingScript-Bold-VTT.ttf.T_S_I</strong>2.ttx src/DancingScript-Bold-VTT.ttf.T_S_I<strong>1.ttx src/DancingScript-Bold-VTT.ttf.T_S_I</strong>0.ttx src/DancingScript-Bold-VTT.ttf.O_S_2f_2.ttx src/DancingScript-Bold-VTT.ttf.GlyphOrder.ttx src/DancingScript-Bold-VTT.ttf.G_S_U_B</em>.ttx src/DancingScript-Bold-VTT.ttf.G_P_O_S_.ttx src/DancingScript-Bold-VTT.ttf.G_D_E_F_.ttx /home/travis/build/fontdirectory/dancingscript/builds/build/sources</p>
+<h3>(2 of 6) pyfontaine</h3>
+<h3>(3 of 6) Run upstream tests</h3>
+<p>$ bakery-lint.py upstream-repo sources
+$ fontaine --collections subsets --text /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Bold-VTT.ttf.ttx /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Bold.otf.ttx /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Regular-VTT.ttf.ttx /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Regular.otf.ttx /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Bold.ttf.ttx /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Regular.ttf.ttx &gt; fontaine.txt
+WARNING: Please install <a href="https://pypi.python.org/pypi/PyICU">PyICU</a> toenable [feature], perhaps with: pip install pyicu
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_prepolation_glyph_contours(): OK
+end of pyfontaine process
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_prepolation_glyph_points(): OK
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_test_prepolation_glyph_names(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_component(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_mark_to_mark(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_own_glyphs(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_bakery_yaml_exists(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_copyright_notices_same_across_family(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_description_html_exists(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_fontlog_txt_exists(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_metadata_json_exists(): OK
+$ bakery-lint.py upstream-ttx DancingScript-Bold-VTT.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): OK
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Bold-VTT.ttf.ttx /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Bold.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+$ bakery-lint.py upstream-ttx DancingScript-Bold.otf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): OK
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Bold.otf.ttx /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Bold.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+$ bakery-lint.py upstream-ttx DancingScript-Regular-VTT.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): OK
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Regular-VTT.ttf.ttx /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Regular.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+$ bakery-lint.py upstream-ttx DancingScript-Regular.otf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): OK
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Regular.otf.ttx /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Regular.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+$ bakery-lint.py upstream-ttx DancingScript-Bold.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): OK
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Bold.ttf.ttx /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Bold.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+$ bakery-lint.py upstream-ttx DancingScript-Regular.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): OK
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Regular.ttf.ttx /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Regular.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK</p>
+<h3>(4 of 6) Convert sources to TTF</h3>
+<p>$ ttx -d /home/travis/build/fontdirectory/dancingscript/builds/build /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Regular.ttx /home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Bold.ttx
+Compiling "/home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Regular.ttx" to "/home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'hmtx' table...
+Parsing 'LTSH' table...
+Parsing 'VDMX' table...
+Parsing 'hdmx' table...
+Parsing 'cmap' table...
+Parsing 'fpgm' table...
+Parsing 'prep' table...
+Parsing 'cvt ' table...
+Parsing 'loca' table...
+Parsing 'glyf' table...
+Parsing 'kern' table...
+Parsing 'name' table...
+Parsing 'post' table...
+Parsing 'gasp' table...
+Parsing 'GDEF' table...
+Parsing 'GPOS' table...
+Parsing 'GSUB' table...
+Compiling "/home/travis/build/fontdirectory/dancingscript/builds/build/sources/DancingScript-Bold.ttx" to "/home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'hmtx' table...
+Parsing 'LTSH' table...
+Parsing 'VDMX' table...
+Parsing 'hdmx' table...
+Parsing 'cmap' table...
+Parsing 'fpgm' table...
+Parsing 'prep' table...
+Parsing 'cvt ' table...
+Parsing 'loca' table...
+Parsing 'glyf' table...
+Parsing 'kern' table...
+Parsing 'name' table...
+Parsing 'post' table...
+Parsing 'gasp' table...
+Parsing 'GDEF' table...
+Parsing 'GPOS' table...
+Parsing 'GSUB' table...</p>
+<h3>Test DancingScript-Regular.ttf</h3>
+<p>$ bakery-lint.py result DancingScript-Regular.ttf</p>
+<h3>Test DancingScript-Bold.ttf</h3>
+<p>$ bakery-lint.py result DancingScript-Bold.ttf</p>
+<h3>(5 of 6) Generate METADATA.json (genmetadata.py)</h3>
+<p>$ genmetadata.py /home/travis/build/fontdirectory/dancingscript/builds/build
+{} exists
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+Designer's name from font is: Pablo Impallari
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+Original size: 110740\nGzip size: 59725
+Family Name: Dancing Script
+PS Name: DancingScript-Bold
+Full Name: Dancing Script Bold
+Style: normal
+Weight: 700
+Filename: DancingScript-Bold.ttf
+Copyright: Copyright (c) 2011 by Pablo Impallari. www.impallari.com Igino Marini. www.ikern.com. All rights reserved.
+Family Name: Dancing Script
+PS Name: DancingScript
+Full Name: Dancing Script
+Style: normal
+Weight: 400
+Filename: DancingScript-Regular.ttf
+Copyright: Copyright (c) 2011 by Pablo Impallari. www.impallari.com. All rights reserved.</p>
+<h3>(6 of 6) Run tests for METADATA.json</h3>
+<p>$ bakery-lint.py metadata METADATA.json
+bakery_lint.tests.metadata_test.MetadataSubsetsListTest.test_charset_latin(): FAIL
+bakery_lint.tests.metadata_test.MetadataSubsetsListTest.test_charset_menu(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_description_is_more_than_500b(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_description_is_valid_html(): FAIL
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): OK
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): OK
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): FAIL
+$ bakery-gasp.py --set=15 /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): FAIL
+$ bakery-gasp.py --set=15 /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ bakery-gasp.py --set=15 /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ bakery-gasp.py --set=15 /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+The following table(s) in the font have been ignored by FontForge
+  Ignoring 'LTSH' linear threshold table
+  Ignoring 'VDMX' vertical device metrics table
+  Ignoring 'hdmx' horizontal device metrics table
+This font contains both a 'kern' table and a 'GPOS' table.
+  The 'kern' table will only be read if there is no 'kern' feature in 'GPOS'.
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+The following table(s) in the font have been ignored by FontForge
+  Ignoring 'LTSH' linear threshold table
+  Ignoring 'VDMX' vertical device metrics table
+  Ignoring 'hdmx' horizontal device metrics table
+This font contains both a 'kern' table and a 'GPOS' table.
+  The 'kern' table will only be read if there is no 'kern' feature in 'GPOS'.
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_daltonmaag_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontbureau_catalogue(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontscom_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontshop_catalogue(): FAIL
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): FAIL
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontsmith_catalogue(): OK
+$ bakery-vmet-fix.py --autofix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+$ bakery-vmet-fix.py --autofix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_houseind_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_myfonts_catalogue(): OK
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+$ bakery-vmet-fix.py /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+Error: 
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+Error: 
+$ bakery-vmet-fix.py /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_veer_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_family_is_listed_in_gwf(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_atleast_latin_menu_subsets_exist(): OK
+Parameter              DancingScript-Regular.ttf    DancingScript-Bold.ttf  <br />
+ymax                   920                          950                     <br />
+hhea.ascent            950                          950                     <br />
+OS/2.sTypoAscender     950                          950                     <br />
+OS/2.usWinAscent       950                          950                     <br />
+ymin                   -280                         -280                    <br />
+hhea.descent           -280                         -280                    <br />
+OS/2.sTypoDescender    -280                         -280                    <br />
+OS/2.usWinDescent      280                          280                     <br />
+hhea.lineGap           0                            0                       <br />
+OS/2.sTypoLineGap      0                            0                       <br />
+hhea total             1230                         1230                    <br />
+typo total             1230                         1230                    <br />
+win total              1230                         1230                    <br />
+UPM:Heights            1000:1200                    1000:1230               <br />
+UPM:Heights %          120 %                        123 %                     </p>
+<p>Parameter              DancingScript-Regular.ttf    DancingScript-Bold.ttf  <br />
+ymax                   920                          950                     <br />
+hhea.ascent            950                          950                     <br />
+OS/2.sTypoAscender     950                          950                     <br />
+OS/2.usWinAscent       950                          950                     <br />
+ymin                   -280                         -280                    <br />
+hhea.descent           -280                         -280                    <br />
+OS/2.sTypoDescender    -280                         -280                    <br />
+OS/2.usWinDescent      280                          280                     <br />
+hhea.lineGap           0                            0                       <br />
+OS/2.sTypoLineGap      0                            0                       <br />
+hhea total             1230                         1230                    <br />
+typo total             1230                         1230                    <br />
+win total              1230                         1230                    <br />
+UPM:Heights            1000:1200                    1000:1230               <br />
+UPM:Heights %          120 %                        123 %                     </p>
+<p>/home/travis/virtualenv/python2.7.8/lib/python2.7/site-packages/bakery_lint/tests/metadata_test.py:141: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  self.assertTrue(designer in designers,
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_designer_exists_in_profiles_csv(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_items_dicts(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_key_list(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_no_dupes(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_has_unique_style_weight_pairs(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_keys(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_license(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_no_unknown_top_keys(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_subsets_key_list(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_top_keys_types(): FAIL
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_contains_correct_rfn(): FAIL
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_is_consistent_across_family(): FAIL
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_matches_pattern(): OK
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_metadata_copyright_size(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_font_name_matches_family(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_family(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_family_values_are_all_the_same(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_filename_matches_postScriptName(): FAIL
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_font_have_regular(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fonts_fields_have_fontname(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fullname_is_equal_to_internal_font_fullname(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fullname_matches_postScriptName(): FAIL
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_postScriptName_matches_ttf_fontname(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_regular_is_400(): FAIL
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_regular_is_normal(): FAIL
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_copyrighttxt_exists(): FAIL
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_description_exists(): OK
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_fontlogtxt_exists(): OK
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_licensetxt_exists(): FAIL
+bakery_lint.tests.downstream.test_check_subsets_exists.CheckSubsetsExist.test_check_subsets_exists(): FAIL
+bakery_lint.tests.downstream.test_check_monospace_agreements.CheckMonospaceAgreement.test_check_monospace_agreement(): OK
+bakery_lint.tests.downstream.test_check_metadata_style_matches_names.CheckItalicStyleMatchesMacStyle.test_check_italic_style_matches_names(): OK
+bakery_lint.tests.downstream.test_check_metadata_style_matches_names.CheckNormalStyleMatchesMacStyle.test_check_normal_style_matches_names(): OK
+bakery_lint.tests.downstream.test_check_metadata_matches_nametable.CheckMetadataMatchesNameTable.test_check_metadata_matches_nametable(): OK
+bakery_lint.tests.downstream.test_check_metadata_fields.CheckMetadataFields.test_check_metadata_fields(): OK
+bakery_lint.tests.downstream.test_check_menu_contains_proper_glyphs.CheckMenuSubsetContainsProperGlyphs.test_check_menu_contains_proper_glyphs(): ERROR
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_encodings_of_glyphs_across_family(): OK
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_names_of_glyphs_across_family(): OK
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_number_of_glyphs_across_family(): OK
+bakery_lint.tests.downstream.test_check_font_name_not_in_camelcase.CheckFontNameNotInCamelCase.test_fontname_not_in_camel_case(): OK
+bakery_lint.tests.downstream.test_check_files_menu_agreements.CheckFontsMenuAgreements.test_menu_file_agreement(): FAIL
+bakery_lint.tests.downstream.test_check_familyname_matches_fontnames.CheckFamilyNameMatchesFontNames.test_check_familyname_matches_fontnames(): OK
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckCanonicalWeights.test_check_canonical_weights(): OK
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckPostScriptNameMatchesWeight.test_postscriptname_contains_correct_weight(): FAIL
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckFontWeightSameAsInMetadata.test_font_weight_same_as_in_metadata(): OK
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckFullNameEqualCanonicalName.test_metadata_contains_current_font(): OK
+bakery_lint.tests.downstream.test_check_canonical_styles.CheckCanonicalStyles.test_check_canonical_styles(): OK
+bakery_lint.tests.downstream.test_check_canonical_filenames.CheckCanonicalFilenames.test_check_canonical_filenames(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): FAIL
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): FAIL
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ bakery-encode-glyphs-fix.py --autofix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ bakery-encode-glyphs-fix.py --autofix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ bakery-nbsp-fix.py /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ bakery-nbsp-fix.py /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ bakery-opentype-fix.py /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ bakery-opentype-fix.py /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): FAIL
+$ bakery-dsig.py /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): FAIL
+$ bakery-dsig.py /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ bakery-fstype-fix.py --autofix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ bakery-fstype-fix.py --autofix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): OK
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf.fix /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_file_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_file_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL</p>
+<h3>Optimize TTF DancingScript-Regular.ttf</h3>
+<h3>Optimize TTF DancingScript-Bold.ttf</h3>
+<p>$ ls -l 'DancingScript-Bold.ttf'* # look at the size savings of that subset process
+DancingScript-Bold.ttf.opt: 107432 bytes
+DancingScript-Bold.ttf: 109788 bytes
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf.opt /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf</p>
+<h3>Autohint TTFs (ttfautohint) DancingScript-Bold.ttf</h3>
+<p>$ ls -l 'DancingScript-Regular.ttf'* # look at the size savings of that subset process
+DancingScript-Regular.ttf.opt: 108928 bytes
+DancingScript-Regular.ttf: 111200 bytes
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf.opt /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf</p>
+<h3>Autohint TTFs (ttfautohint) DancingScript-Regular.ttf</h3>
+<p>$ ls -l /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf: 107432 bytes
+/home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.autohint.ttf: 91380 bytes
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.autohint.ttf /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf</p>
+<h3>Subset TTFs (pyftsubset) DancingScript-Bold.ttf</h3>
+<p>$ ls -l /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf: 108928 bytes
+/home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.autohint.ttf: 91752 bytes
+$ mv /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.autohint.ttf /home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf</p>
+<h3>Subset TTFs (pyftsubset) DancingScript-Regular.ttf</h3>
+<p>Generate DancingScript-Bold.latin
+Generate DancingScript-Regular.latin
+Generate DancingScript-Bold.menu
+strippedname:/home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Bold.ttf
+No nbsp glyph
+spaceWidth is    259
+nbspWidth is     0
+DancingScript-Bold.ttf.fix made with spaceWidth and nbspWidth of 259
+Generate DancingScript-Regular.menu
+strippedname:/home/travis/build/fontdirectory/dancingscript/builds/build/DancingScript-Regular.ttf
+No nbsp glyph
+spaceWidth is    259
+nbspWidth is     0
+DancingScript-Regular.ttf.fix made with spaceWidth and nbspWidth of 259
+{
+  "name": "Dancing Script", 
+  "designer": "Pablo Impallari", 
+  "license": "OFL", 
+  "visibility": "External", 
+  "category": "Handwriting", 
+  "size": 60264, 
+  "fonts": [
+    {
+      "name": "Dancing Script", 
+      "postScriptName": "DancingScript-Bold", 
+      "fullName": "Dancing Script Bold", 
+      "style": "normal", 
+      "weight": 700, 
+      "filename": "DancingScript-Bold.ttf", 
+      "copyright": "Copyright (c) 2011 by Pablo Impallari. www.impallari.com Igino Marini. www.ikern.com. All rights reserved."
+    }, 
+    {
+      "name": "Dancing Script", 
+      "postScriptName": "DancingScript", 
+      "fullName": "Dancing Script", 
+      "style": "normal", 
+      "weight": 400, 
+      "filename": "DancingScript-Regular.ttf", 
+      "copyright": "Copyright (c) 2011 by Pablo Impallari. www.impallari.com. All rights reserved."
+    }
+  ], 
+  "subsets": [
+    "latin"
+  ], 
+  "dateAdded": "2011-05-18"
+}</p></pre>
+</div>
+<!-- Footer -->
+
+
+  <footer class="footer">
+    <div class="container-fluid">
+      <ul class="footer-links">
+        <li><a href='https://github.com/googlefonts/fontbakery-cli/edit/master/bakery_cli/report/templates/buildlog.html'>Edit this page's template</a></li>
+        <li><a href='https://github.com/googlefonts/fontbakery-cli/'>Made with Font Bakery</a> (<a href='http://www.gnu.org/philosophy/free-sw.html'>libre software</a> available under the terms of the <a href='https://github.com/googlefonts/fontbakery-cli/blob/master/LICENSE.txt'>Apache 2.0 license</a>.)</li>
+        <li>Please <a href='https://github.com/googlefonts/fontbakery-cli/issues/new'>report bugs</a>, suggest features, and contribute on <a href='https://github.com/googlefonts/fontbakery-cli/'>GitHub <i class='icon-github'></i></a></li>
+        
+        <li>d2d5f79a35f8fac07fa02a9d372879fb21a8275a, Fri Sep 19 10:15:07 2014 +0300</li>
+        
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

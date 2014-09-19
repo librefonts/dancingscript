@@ -1,0 +1,6 @@
+commit: HEAD
+process_files: [DancingScript-Regular.ttf.ttx, DancingScript-Bold.ttf.ttx, src/DancingScript-Regular.otf.ttx,
+  src/DancingScript-Regular-VTT.ttf.ttx, src/DancingScript-Bold.otf.ttx, src/DancingScript-Bold-VTT.ttf.ttx]
+pyftsubset: --notdef-outline --name-IDs=* --hinting
+subset: [latin]
+ttfautohint: -l 7 -r 28 -G 50 -x 13 -w "G"
